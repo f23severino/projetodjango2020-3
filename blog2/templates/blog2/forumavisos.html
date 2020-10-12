@@ -1,0 +1,92 @@
+<!-- Instrução para o navegador da web sobre qual versão do HTML a página está escrita. Não é uma tag.  -->
+<!DOCTYPE html>
+
+<!-- Carregando arquivos estáticos -->
+{% load static %}
+
+<!-- Declara o idioma padrão de texto na pagina -->
+<html lang="pt-br">
+
+    <head>
+      <!--Meta elements são tags usadas em documentos HTML e XHTML para fornecer metadados estruturados sobre uma página da Web. Eles fazem parte da seção principal de uma página da web. Vários elementos Meta com atributos diferentes podem ser usados ​​na mesma página -->
+
+      <!-- Para interpretar corretamente os caracteres acentuados -->
+      <!-- Importante para garantir a correta codificação dos caracteres -->
+      <meta charset="utf-8" />
+
+      <!-- Descrição do conteudo do site -->
+      <meta name="description" content="Campo de Instrução Marechal Hermes" />
+
+      <!--Define o autor da página -->
+      <meta name="author" content="Sd EP Severino" />
+
+        <!--Atualiza a pagina a cada 60 segundos -->
+          <!--Ativar quando a página estiver pronta -->
+        <!-- <meta http-equiv="refresh" content="60" /> -->
+
+        <!-- Adiciona icone ao titulo da guia. Sempre usar icones com a extensão .ico-->
+        <link rel="icon" href="{% static 'imagens/icons/logocimh.ico' %}" />
+
+        <!--Irá prepará a página para os diferentes dispositivos existentes -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Referenciando o google para obter fonte Poppins, perfeito para projetos de branding,
+        designs de utilidades domésticas, embalagens de produtos - ou simplesmente como uma sobreposição
+        de texto elegante em qualquer imagem de fundo. -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+        <!--Inserindo bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!--Arquivo com configurações .css armazenado localmente -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/estiloblog2.css' %}">
+
+        <!-- Define o titulo da página -->
+        <title>{% block title %}Forum Avisos CIMH{% endblock %}</title>
+
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Fórum de Avisos do CIMH</a></h1>
+        </div>
+
+        <div>
+            <p>publicado: 14.06.2014, 12:14</p>
+            <h2><a href="">Meu primeiro post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </div>
+
+        <div>
+            <p>publicado: 14.06.2014, 12:14</p>
+            <h2><a href="">Meu segundo post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer>
+          <address>
+            Endereço:
+            Av. Rigesa, 000 - Centro, Três Barras - SC, 89490-000. <br>
+            <!-- Site desenvolvido por: Sd EP Severino -->
+            Copyright &copy; 2015-<script>document.write(new Date().getFullYear());</script> All rights reserved | Site developed by: Sd EP Jean Charles Severino
+            <!-- Copyright &copy; 2015-<script>document.write(new Date().getFullYear());</script> All rights reserved | Site developed by: <br> Sd EP Jean Charles Severino -->
+          </address>
+        </footer>
+    </body>
+</html>

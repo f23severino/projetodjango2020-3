@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% block title %}Diretor{% endblock %}
+{% block content %}
+<div class="container-fluid">
+  <h2>Diretor</h2>
+  <!--A tag <strong> é uma tag de frase. Define texto importante.
+  Dica: essa tag não está obsoleta, mas é possível obter um efeito mais rico com o CSS. -->
+  <strong>COMANDANTE DO CIMH</strong>
+  <br>
+  <br>
+  <div align="center">
+    {% load static %}
+    <img src="{% static 'imagens/albuns/galeria_cimh/diretor/coronel_ryu.jpg' %}" alt="Foto do Diretor do Campo de Instrução Marechal Hermes, Coronel Marcelo Ryu" title="Foto do Coronel Ryu" />
+  </div>
+  <br>
+  <div align="center">
+    Marcelo RYU - Cel <br>
+    Arma de Infantaria <br>
+    Ano de Formação 1978
+  </div>
+</div>
+{% endblock %}

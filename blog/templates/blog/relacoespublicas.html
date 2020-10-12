@@ -1,0 +1,37 @@
+{% extends 'blog/base.html' %}
+{% block title %}RelaçõesPúblicas{% endblock %}
+{% block content %}
+<div class="container-fluid">
+  <h2 class="titulo">Relacões Públicas</h2>
+  <!--A tag <strong> é uma tag de frase. Define texto importante.
+  Dica: essa tag não está obsoleta, mas é possível obter um efeito mais rico com o CSS. -->
+  <strong>RELAÇÕES PÚBLICAS DO CIMH</strong>
+  <!-- <br>
+  <br> -->
+  <div class="container" style="margin-top:30px">
+    <div class="row">
+      <div class="col-sm" align="center">
+        {% load static %}
+        <a href="{% static 'midia/arquivos/rp/plano_comsoc_20182019/doc.pdf' %}" target="_blank">
+          <img src="{% static 'midia/imagens/rp/plano_comsoc_20182019/img.png' %}" alt="Plano de Comunicação Social" title="Plano de Comunicação Social">
+        </a>
+        <p><br> Plano de Comunicação Social <br> do Exército Brasileiro </p>
+      </div>
+      <div class="col-sm" align="center">
+        {% load static %}
+        <a href="{% static 'midia/arquivos/rp/manual_assessoria_imprensa/doc.pdf' %}" target="_blank">
+          <img src="{% static 'midia/imagens/rp/manual_assessoria_imprensa/img.png' %}" alt="Manual de Acessoria de Comunicação" title="Manual de Acessoria de Comunicação">
+        </a>
+        <p><br> Manual de Acessoria <br> de Comunicação </p>
+      </div>
+      <div class="col-sm" align="center">
+        {% load static %}
+        <a href="{% static 'midia/arquivos/rp/emissao-cartoes-aniversariantes/doc.pdf' %}" target="_blank">
+          <img class="img_rp_1" src="{% static 'midia/imagens/rp/emissao-cartoes-aniversariantes/img.png' %}" alt="Plano de Emissão de Cartões dos Aniversariantes" title="Plano de Emissão  de Cartões dos Aniversariantes">
+        </a>
+        <p><br> Emissão de Cartões <br> de Aniversariantes </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

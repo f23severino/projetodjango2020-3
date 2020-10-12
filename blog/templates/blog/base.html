@@ -1,0 +1,321 @@
+<!-- Instrução para o navegador da web sobre qual versão do HTML a página está escrita. Não é uma tag.  -->
+<!DOCTYPE html>
+
+<!-- Carregando arquivos estáticos -->
+{% load static %}
+
+<!-- Declara o idioma padrão de texto na pagina -->
+<html lang="pt-br">
+
+<!--O elemento <head> é um contêiner para todos os elementos head -->
+<!--O elemento <head> pode incluir um título para o documento, scripts, estilos, meta informações e mais.-->
+<head>
+
+  <!--Meta elements são tags usadas em documentos HTML e XHTML para fornecer metadados estruturados sobre uma página da Web. Eles fazem parte da seção principal de uma página da web. Vários elementos Meta com atributos diferentes podem ser usados ​​na mesma página -->
+
+  <!-- Para interpretar corretamente os caracteres acentuados -->
+  <!-- Importante para garantir a correta codificação dos caracteres -->
+  <meta charset="utf-8" />
+
+  <!-- Descrição do conteudo do site -->
+  <meta name="description" content="Campo de Instrução Marechal Hermes" />
+
+  <!--Define o autor da página -->
+  <meta name="author" content="Sd EP Severino" />
+
+  <!--Atualiza a pagina a cada 60 segundos -->
+    <!--Ativar quando a página estiver pronta -->
+  <!-- <meta http-equiv="refresh" content="60" /> -->
+
+  <!-- Adiciona icone ao titulo da guia. Sempre usar icones com a extensão .ico-->
+  <link rel="icon" href="{% static 'imagens/icons/logocimh.ico' %}" />
+
+  <!--Irá prepará a página para os diferentes dispositivos existentes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--Referenciando arquivo estilo css com as formatações locais e cdn's  -->
+  <!--Referenciando o google Playfair- estilos de textos para os textos da página -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet"> -->
+
+  <!--Referenciando o google para obter imagens tipo icons para a página -->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+  <!--Referenciando o google para obter fonte Poppins, perfeito para projetos de branding,
+  designs de utilidades domésticas, embalagens de produtos - ou simplesmente como uma sobreposição
+  de texto elegante em qualquer imagem de fundo. -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+  <!--Inserindo bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+  <!-- jQuery library -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <!-- Popper JS -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+  <!-- Latest compiled JavaScript -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+  <!--Inserindo bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--Arquivo com configurações .css armazenado localmente -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/estiloblog.css' %}">
+
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+  <!-- <script type="text/javascript" src='{% static "assets/javascript/meujsteste.js" %}'></script> -->
+  <!-- <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/popper.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/main.js' %}"></script> -->
+
+  <!-- <script src="js/jquery.min.js"></script> -->
+  <!-- <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script> -->
+
+  <!-- Define o titulo da página -->
+  <title>{% block title %}Intranet CIMH{% endblock %}</title>
+
+</head>
+
+<body>
+
+  <div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar">
+      <div class="p-4 pt-5">
+        <a href="{% url 'index' %}" class="img logo rounded-circle mb-5" style="background-image: url(../static/imagens/logos/logo-circulo-4.png);"></a>
+        <ul class="list-unstyled components mb-5">
+          <li class="active">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">C I M H</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li>
+                  <a href="/historico1/">Histórico</a>
+              </li>
+              <li>
+                  <a href="/missao/">Missão</a>
+              </li>
+              <li>
+                  <a href="/visao/">Visão</a>
+              </li>
+              <li>
+                  <a href="/objetivos/">Objetivos</a>
+              </li>
+              <li>
+                  <a href="/diretor/">Diretor</a>
+              </li>
+              <li>
+                  <a href="/subdiretor/">Subdiretor</a>
+              </li>
+              <li>
+                  <a href="/exdiretores/">Ex-Diretores</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Seções</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+              <li>
+                  <a href="/militares/">S-1</a>
+              </li>
+              <li>
+                  <a href="/inteligencia/">S-2</a>
+              </li>
+              <li>
+                  <a href="/instrucao/">S-3</a>
+              </li>
+              <li>
+                  <a href="/administracao/">S-4</a>
+              </li>
+              <li>
+                  <a href="/relacoespublicas/">RP</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Institucional</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu2">
+              <li>
+                  <a href="http://www.eb.mil.br/" target = " _blank ">Exército</a>
+              </li>
+              <li>
+                  <a href="http://www.dgp.eb.mil.br/" target = " _blank ">DGP</a>
+              </li>
+              <li>
+                  <a href="https://www.cpex.eb.mil.br/" target = " _blank " >CPEX</a>
+              </li>
+              <li>
+                  <a href="http://www.fhe.org.br/" target = " _blank ">FHE</a>
+              </li>
+              <li>
+                  <a href="http://www.colog.eb.mil.br/" target = " _blank ">Colog</a>
+              </li>
+              <li>
+                  <a href="http://www.5rm.eb.mil.br/" target = " _blank " >5ª RM</a>
+              </li>
+              <li>
+                  <a href="{% static 'midia/arquivos/plano-gestao/pl-cimh-2020.pdf' %}" target = " _blank ">Plano Gestão</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">B I</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu3">
+              {% if user.is_authenticated %}
+              <!-- <li>
+                  <a href="/bi20201/">2020</a>
+              </li>
+              <li>
+                  <a href="/bi20191/">2019</a>
+              </li>
+              <li>
+                  <a href="/bi20181/">2018</a>
+              </li>
+              <li>
+                  <a href="/bi20171/">2017</a>
+              </li>
+              <li>
+                  <a href="/bi20161/">2016</a>
+              </li> -->
+              <li>
+                  <a href="/bi20151/">2015</a>
+              </li>
+              {% else %}
+              <div class="alert alert-warning alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Acesso Negado!</strong> Conteúdo com Acesso Restrito!
+              </div>
+              <div class="alert alert-info alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Atenção!</strong> Realize login para obter acesso!
+              </div>
+              {% endif %}
+            </ul>
+          </li>
+          <li>
+            <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sistemas</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu4">
+              <li>
+                  <a href="http://spedconsulta.cimh.eb.mil.br" target = " _blank ">SPED Consulta</a>
+              </li>
+              <li>
+                  <a href="http://sped.cimh.eb.mil.br" target = " _blank ">SPED M I</a>
+              </li>
+              <li>
+                  <a href="http://sisbol.cimh.eb.mil.br" target = " _blank " >SISBOL</a>
+              </li>
+              {% if not user.is_authenticated %}
+              <li>
+                  <a href="/accounts/login/">Login</a>
+              </li>
+              {% else %}
+              <li>
+                  <a href="/accounts/logout/">Logout</a>
+              </li>
+              {% endif %}
+            </ul>
+          </li>
+          <li>
+            <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Telefones</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu5">
+              <li>
+                  <a href="/telefones2/">Civil</a>
+              </li>
+              <li>
+                  <a href="/telefones/">Militar</a>
+              </li>
+              <li>
+                  <a href="{% static 'midia/arquivos/ramais/ramais-cimh.pdf' %}" target = " _blank ">Ramais</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+              <a href="/aniversarios1/">Aniversários</a>
+          </li>
+          <li>
+            <a href="/contato/">Contato</a>
+          </li>
+        </ul>
+
+       <!-- Uma seção de rodapé em um documento. A <footer>tag define um rodapé para um documento ou seção -->
+       <!-- Um <footer>elemento normalmente contém: informação de autoria; Informações sobre direitos autorais;
+       Informações de Contato; Mapa do site; voltar aos links principais; documentos relacionados. -->
+        <div class="footer">
+          <address>
+            Endereço: <br>
+            Av. Rigesa, 000 - Centro <br> Três Barras - SC, 89490-000. <br>
+          </address>
+          <p>
+            Copyright &copy; 2015-<script>document.write(new Date().getFullYear());</script> All rights reserved | Site developed by: <br> Sd EP Jean Charles Severino
+          </p> <!-- Site desenvolvido por: Sd EP Severino -->
+               <!-- Copyright © 2015-2020 Sd EP Severino -->
+        </div>
+
+      </div>
+    </nav>
+
+      <!-- Container da Página -->
+    <div id="content" class="p-4 p-md-5">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+          <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Toggle Menu</span>
+          </button>
+          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'index' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'avisos:forumavisos' %}" target="_blank">Avisos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% static 'midia/arquivos/escala/escala.pdf' %}" target="_blank">Escala</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% static 'midia/arquivos/cardapio/cardapio.pdf' %}" target="_blank">Cardápio</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/localizacao/">Localização</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/contato/">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <h2 class="mb-4">Campo de Instrução Marechal Hermes</h2>
+
+      {% block content %}
+      {% endblock %}
+
+      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      -->
+      <!-- <div class="jumbotron text-center" style="margin-bottom:0">
+        <p>Footer</p>
+      </div> -->
+
+    </div>
+  </div>
+
+  <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/popper.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+  <!-- <script src="../static/js/jquery.min.js"></script>
+  <script src="../static/js/popper.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/main.js"></script>  -->
+</body>
+</html>

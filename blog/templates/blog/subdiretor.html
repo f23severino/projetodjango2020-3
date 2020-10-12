@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% block title %}Subdiretor{% endblock %}
+{% block content %}
+<div class="container-fluid">
+  <h2>Subdiretor</h2>
+  <!--A tag <strong> é uma tag de frase. Define texto importante.
+  Dica: essa tag não está obsoleta, mas é possível obter um efeito mais rico com o CSS. -->
+  <strong>SUBCOMANDANTE DO CIMH</strong>
+  <br>
+  <br>
+  <div align="center">
+    {% load static %}
+    <img src="{% static 'imagens/albuns/galeria_cimh/subdiretor/1tenente_proenca.jpg' %}" alt="Foto do Subdiretor do Campo de Instrução Marechal Hermes, 1º Tenente Proença" title="Foto do 1º Tenente Proença" />
+  </div>
+  <br>
+  <div align="center">
+    André Felipe De PROENÇA - 1º Ten <br>
+    Serviço de Intendência <br>
+    Ano de Formação 2014
+  </div>
+</div>
+{% endblock %}

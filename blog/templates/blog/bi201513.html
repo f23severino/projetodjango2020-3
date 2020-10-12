@@ -1,0 +1,75 @@
+{% extends 'blog/base.html' %}
+{% block title %}Boletins Internos Março 2015{% endblock %}
+{% block content %}
+<div class="container-fluid">
+  <h2>Boletins Internos 2015</h2>
+  <strong>BOLETINS INTERNOS DO CIMH</strong>
+  <div class="container" style="margin-top:30px">
+    <div class="row">
+      <div class="col-sm">
+          <a href="/bi20151/" class="btn btn-dark  btn-sm" role="button">Voltar</a>
+          <!-- {% load static %}
+          <a href="/bi20151/"><img src="{% static 'imagens/button/voltar.png' %}" alt="Imagem de um botão que tem escrito nele "voltar". Clicando neste botão ele faz retornar para página principal dos meses dos boletins, onde mostra todos os meses do ano" title="Opção voltar"></a> -->
+        </div>
+        <div class="col-sm-8" align="center">
+          <br><br>
+          <h2>Boletins de Março</h2>
+          <br>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead class="thead-dark">
+                <tr align="center"> <!-- linha -->
+                  <th> ORDEM </th> <!-- Cabeçalho -->
+                  <th> Nº BI </th>
+                </tr>
+                <tr align="center">
+                  <td> Adit </td> <!-- Célula/Coluna-->
+                  <td> <a href="{% static 'midia/arquivos/boletins/bi2015/marco2015/Adit_Incorp_EV.pdf' %}" target="_blank"> Aditamento Incorp Sd EV </a> </td>
+                </tr>
+                <tr align="center">
+                  <td> 19 </td> <!-- Célula/Coluna-->
+                  <td> <a href="{% static 'midia/arquivos/boletins/bi2015/marco2015/BI_019_3_Mar_15.pdf' %}" target="_blank"> BI DIA 03 MAR 2015 </a> </td>
+                </tr>
+                <tr align="center">
+                  <td> 20 </td> <!-- Célula/Coluna-->
+                  <td> <a href="{% static 'midia/arquivos/boletins/bi2015/marco2015/BI_020_6_Mar_15.pdf' %}" target="_blank"> BI DIA 06 MAR 2015 </a> </td>
+                </tr>
+                <tr align="center">
+                  <td> 21 </td> <!-- Célula/Coluna-->
+                  <td> <a href="{% static 'midia/arquivos/boletins/bi2015/marco2015/BI_021_10_Mar_15.pdf' %}" target="_blank"> BI DIA 10 MAR 2015 </a> </td>
+                </tr>
+                <tr align="center">
+                  <td> 22 </td> <!-- Célula/Coluna-->
+                  <td> <a href="{% static 'midia/arquivos/boletins/bi2015/marco2015/BI_022_13_Mar_15.pdf' %}" target="_blank"> BI DIA 13 MAR 2015 </a> </td>
+                </tr>
+                <tr align="center">
+                  <td> 23 </td> <!-- Célula/Coluna-->
+                  <td> <a href="{% static 'midia/arquivos/boletins/bi2015/marco2015/BI_023_17_Mar_15.pdf' %}" target="_blank"> BI DIA 17 MAR 2015 </a> </td>
+                </tr>
+                <tr align="center">
+                  <td> 24 </td> <!-- Célula/Coluna-->
+                  <td> <a href="{% static 'midia/arquivos/boletins/bi2015/marco2015/BI_024_20_Mar_15.pdf' %}" target="_blank"> BI DIA 20 MAR 2015 </a> </td>
+                </tr>
+                <tr align="center">
+                  <td> 25 </td> <!-- Célula/Coluna-->
+                  <td> <a href="{% static 'midia/arquivos/boletins/bi2015/marco2015/BI_025_24_Mar_15.pdf' %}" target="_blank"> BI DIA 24 MAR 2015 </a> </td>
+                </tr>
+                <tr align="center">
+                  <td> 26 </td> <!-- Célula/Coluna-->
+                  <td> <a href="{% static 'midia/arquivos/boletins/bi2015/marco2015/BI_026_27_Mar_15.pdf' %}" target="_blank"> BI DIA 27 MAR 2015 </a> </td>
+                </tr>
+                <tr align="center">
+                  <td> 27 </td> <!-- Célula/Coluna-->
+                  <td> <a href="{% static 'midia/arquivos/boletins/bi2015/marco2015/BI_027_31_Mar_15.pdf' %}" target="_blank"> BI DIA 31 MAR 2015 </a> </td>
+                </tr>
+              </tbody> <!--<tbody> corpo da tabela -->
+            </table> <!-- <table class="table table-hover"> -->
+            <!-- </div>  <div class="table-overflow">  -->
+          </div> <!--   <div class="table-responsive"> -->
+        </div> <!-- <div class="col-sm-9" align="center"> -->
+        <div class="col-sm" align="center">
+        </div>
+      </div> <!--  <div class="row"> -->
+    </div> <!-- div que abrange a tabela <div class="container" style="margin-top:30px"> -->
+  </div> <!-- div principal(da página inteira) - <div class="container-fluid"> -->
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'blog/base.html' %}
+{% block title %}Aniversários Dezembro{% endblock %}
+{% block content %}
+<div class="container-fluid">
+  <h2>Aniversários</h2>
+      <strong>ANIVERSÁRIANTES DO CIMH</strong>
+      <div class="container" style="margin-top:30px">
+        <div class="row">
+          <div class="col-sm">
+              <a href="/aniversarios1/" class="btn btn-dark  btn-sm" role="button">Voltar</a>
+              <!-- {% load static %}
+              <a href="/aniversarios1/"><img src="{% static 'imagens/button/voltar.png' %}" alt="Imagem de um botão que tem escrito nele voltar. Clicando neste botão ele faz retornar para página principal dos aniversários, onde mostra todos os meses do ano" title="Opção voltar"></a> -->
+          </div>
+          <div class="col-sm-7" align="center">
+            <br><br>
+            <h2>Aniversáriantes de Dezembro</h2>
+            <br>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr align="center"> <!-- linha -->
+                    <th> DIA </th> <!-- Cabeçalho -->
+                    <th> POST/NOME </th>
+                  </tr>
+                </thead> <!--<thead class="thead-dark"> cabeçalho da tabela -->
+                <tbody>
+                  <tr align="center">
+                    <td> 06 </td> <!-- Célula/Coluna-->
+                    <td> Sd EV Muller </td>
+                  </tr>
+                  <tr align="center">
+                    <td> 07 </td>
+                    <td> Sd EV Zakcheski </td>
+                  </tr>
+                  <tr align="center">
+                    <td> 08 </td>
+                    <td> Sd EV Dal Comune </td>
+                  </tr>
+                  <tr align="center">
+                    <td> 13 </td>
+                    <td> 3º Sgt Alexandre </td>
+                  </tr>
+                  <tr align="center">
+                    <td> 15 </td>
+                    <td> Sd EV Deller </td>
+                  </tr>
+                </tbody> <!--<tbody> corpo da tabela -->
+              </table> <!-- <table class="table table-hover"> -->
+              <!-- </div>  <div class="table-overflow">  -->
+            </div> <!--   <div class="table-responsive"> -->
+          </div> <!-- <div class="col-sm-9" align="center"> -->
+          <div class="col-sm" align="center">
+          </div>
+        </div> <!--  <div class="row"> -->
+      </div> <!-- div que abrange a tabela <div class="container" style="margin-top:30px"> -->
+    </div> <!-- div principal(da página inteira) - <div class="container-fluid"> -->
+{% endblock %}
